@@ -83,27 +83,48 @@ function hello() {
 }
 
 hello();
-console.log(a);
+console.log(a); // 'hi'
 
-//
+// hoisting is not an issue here
+// function hello() is invoked, within which variable `a` is assigned the
+// value of `hi`; there is no declaration statement for `a`, so when it is
+// assigned a value it is added as a property on the global object--a global
+// variable.
 
 function hello() {
   let a = 'hello';
 }
 
 hello();
-console.log(a);
+console.log(a); // ReferenceError - a is not defined
 
-//
+// function hello() is invoked, and variable `a` is declared with `let`,
+// which has declared: block, visible: local(function) scope. Because `a` is
+// scoped to the function, it is not available at the top level, so when it
+// is referenced on the last line, it cannot be accessed and is not defined
+// for that scope
 
-console.log(a);
+console.log(a); // undefined
 
 var a = 1;
 
-//
+// hoisting is involved. `var a` is hoisted, so `a` is assigned the value
+// `undefined`, but the assignment to value 1  is not hoisted. So when
+// logged, `a` has a value of `undefined`.
 
-console.log(a);
+console.log(a); // Reference Error - a not initialized
 
 let a = 1;
 
-//
+// hoisting is involved. `let a` is hoisted, and the value of `a` is not
+// set--temporal dead zone. When logged, `a` has no value, so this attempt will
+// result in a ReferenceError.
+
+console.log(a); // ReferenceError - a is not defined
+
+function hello() {
+  a = 1;
+}
+
+// hoisting occurs but is not the cause of the ReferenceError; function
+// hello() is never actually invoked, so `a` is not set as a global variable.
