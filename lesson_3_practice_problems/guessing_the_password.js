@@ -7,13 +7,13 @@
 const PASSWORD = 'secret';
 const MAX_GUESSES = 3;
 
-let logSuccess = () => console.log('You have successfully logged in.');
-let logFailure = () => console.log('You have been denied access.');
+const logSuccess = () => console.log('You have successfully logged in.');
+const logFailure = () => console.log('You have been denied access.');
 
 let guesses = 0;
 
 while (guesses < MAX_GUESSES) {
-  let response = prompt("What is the password?");
+  const response = prompt('What is the password?');
 
   if (response === PASSWORD) {
     logSuccess();

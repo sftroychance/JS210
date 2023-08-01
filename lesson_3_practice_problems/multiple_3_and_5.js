@@ -14,7 +14,7 @@
 function multiplesOfThreeAndFive(number) {
   if (number < 0) return;
 
-  for(let counter = 1; counter <= number; counter++) {
+  for (let counter = 1; counter <= number; counter += 1) {
     if (counter % 15 === 0) {
       console.log(`${counter}!`);
     } else if (counter % 3 === 0 || counter % 5 === 0) {
@@ -28,8 +28,8 @@ multiplesOfThreeAndFive(30);
 function rangeMultiplesOfThreeAndFive(start, end) {
   if (end < start) return;
 
-  for(let counter = start; counter <= end; counter++) {
-    if(counter % 3 === 0 && counter % 5 === 0) {
+  for (let counter = start; counter <= end; counter += 1) {
+    if (counter % 3 === 0 && counter % 5 === 0) {
       console.log(`${counter}!`);
     } else if (counter % 3 === 0 || counter % 5 === 0) {
       console.log(counter);

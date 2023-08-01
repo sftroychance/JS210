@@ -14,11 +14,9 @@
 //   }
 // }
 
-// alternative, with continue statement
 function logOddNumbers(number) {
-  for(let counter = 1; counter <= number; counter++) {
-    if (counter % 2 === 0) continue;
-    console.log(counter);
+  for (let counter = 1; counter <= number; counter += 1) {
+    if (counter % 2 === 1) console.log(counter);
   }
 }
 

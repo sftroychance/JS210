@@ -12,7 +12,7 @@
 //    - if counter % number === 0 log number
 
 function logMultiples(number) {
-  for(let counter = 100; counter > 0; counter--) { // can do counter >= number
+  for (let counter = 100; counter > 0; counter -= 1) {
     if (counter % 2 === 1 && counter % number === 0) console.log(counter);
   }
 }
@@ -20,26 +20,26 @@ function logMultiples(number) {
 logMultiples(17);
 logMultiples(21);
 
-function revLogMultiples(number) {
-  const max = 100;
-  maxMultiple = highestMultiple(number, max);
-
-  for(let candidate = maxMultiple; candidate >= number; candidate -= number) {
-    if (candidate % 2 === 1) console.log(candidate);
-  }
-}
-
 function highestMultiple(number, max) {
   return Math.floor(max / number) * number;
+}
+
+function revLogMultiples(number) {
+  const max = 100;
+  const maxMultiple = highestMultiple(number, max);
+
+  for (let candidate = maxMultiple; candidate >= number; candidate -= number) {
+    if (candidate % 2 === 1) console.log(candidate);
+  }
 }
 
 revLogMultiples(17);
 revLogMultiples(21);
 
 function rangeLogMultiples(number, min, max) {
-  maxMultiple = highestMultiple(number, max);
+  const maxMultiple = highestMultiple(number, max);
 
-  for(let candidate = maxMultiple; candidate >= min; candidate -= number) {
+  for (let candidate = maxMultiple; candidate >= min; candidate -= number) {
     if (candidate % 2 === 1) console.log(candidate);
   }
 }

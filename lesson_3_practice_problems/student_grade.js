@@ -14,11 +14,11 @@
 const scores = [];
 
 // for (let count = 1; count <= NUMBER_OF_SCORES; count++) {
-for (let count = 1; ; count++) {
-  let response = prompt(`Enter score ${count} (hit OK to end input):`);
+for (let count = 1; ; count += 1) {
+  const response = prompt(`Enter score ${count} (hit OK to end input):`);
   if (!response) break;
 
-  scores.push(parseInt(response));
+  scores.push(parseInt(response, 10));
 }
 
 const finalScore = scores.reduce((sum, score) => sum + score) / scores.length;
@@ -35,7 +35,7 @@ if (finalScore < 50) {
   letterGrade = 'A';
 }
 
-const result = `Based on the average of your ${scores.length} scores ` +
-               `your letter grade is ${letterGrade}.`;
+const result = `Based on the average of your ${scores.length} scores `
+               + `your letter grade is ${letterGrade}.`;
 
 console.log(result);

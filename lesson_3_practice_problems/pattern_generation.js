@@ -25,14 +25,14 @@
 //      - log output
 
 function generatePattern(nStars) {
-  for(let line = 1; line <= nStars; line++) {
+  for (let line = 1; line <= nStars; line += 1) {
     let output = '';
 
-    for (let digit = 1; digit <= line; digit++) {
+    for (let digit = 1; digit <= line; digit += 1) {
       output += String(digit);
     }
 
-    for (let star = line + 1; star <= nStars; star++) {
+    for (let star = line + 1; star <= nStars; star += 1) {
       output += '*'.repeat(String(star).length);
     }
 

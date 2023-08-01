@@ -18,7 +18,7 @@
 function isPrime(number) {
   if (number < 2 || (number > 2 && number % 2 === 0)) return false;
 
-  for(let divisor = 3; divisor <= Math.sqrt(number); divisor += 2) {
+  for (let divisor = 3; divisor <= Math.sqrt(number); divisor += 2) {
     if (number % divisor === 0) return false;
   }
 
@@ -36,7 +36,7 @@ function checkGoldbach(expectedSum) {
   // 2 is the only even prime number
   if (expectedSum === 4) console.log(2, 2);
 
-  for(let min = 3, max = expectedSum - 3; min <= max; min += 2, max -= 2) {
+  for (let min = 3, max = expectedSum - 3; min <= max; min += 2, max -= 2) {
     if (isPrime(min) && isPrime(max)) console.log(min, max);
   }
 
@@ -50,5 +50,3 @@ checkGoldbach(8);
 checkGoldbach(10);
 checkGoldbach(12);
 checkGoldbach(100);
-
-

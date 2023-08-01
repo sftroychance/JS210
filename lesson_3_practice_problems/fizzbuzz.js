@@ -15,7 +15,7 @@
 //      - else log number
 
 function fizzbuzz() {
-  for(let counter = 1; counter <= 100; counter++) {
+  for (let counter = 1; counter <= 100; counter += 1) {
     if (counter % 3 === 0 && counter % 5 === 0) {
       console.log('FizzBuzz');
     } else if (counter % 3 === 0) {
@@ -31,7 +31,7 @@ function fizzbuzz() {
 fizzbuzz();
 
 function revFizzBuzz() {
-  for(let counter = 1; counter <= 100; counter++) {
+  for (let counter = 1; counter <= 100; counter += 1) {
     let message = '';
 
     if (counter % 3 === 0) message += 'Fizz';
