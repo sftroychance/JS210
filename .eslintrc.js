@@ -22,6 +22,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'curly': ['error', 'all']
+    'max-len': ['error', { 'code': 80 }]
   },
 };
