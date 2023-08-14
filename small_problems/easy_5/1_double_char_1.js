@@ -6,10 +6,10 @@ function repeater(string) {
 
   return string
     .split('')
-    .map(char => char.repeat(REPETITIONS))
+    .map((char) => char.repeat(REPETITIONS))
     .join('');
 }
 
-console.log(repeater('Hello'));        // "HHeelllloo"
-console.log(repeater('Good job!'));    // "GGoooodd  jjoobb!!"
-console.log(repeater(''));             // ""
+console.log(repeater('Hello')); // "HHeelllloo"
+console.log(repeater('Good job!')); // "GGoooodd  jjoobb!!"
+console.log(repeater('')); // ""

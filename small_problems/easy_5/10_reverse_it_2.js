@@ -14,7 +14,7 @@ function reverseWords(string) {
   // return reversed.join(' ');
   return string
     .split(' ')
-    .map(word => word.length >= 5 ? word.split('').reverse().join('') : word)
+    .map(word => (word.length >= 5 ? word.split('').reverse().join('') : word))
     .join(' ');
 }
 

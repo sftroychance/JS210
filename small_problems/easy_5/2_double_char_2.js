@@ -7,7 +7,7 @@ function doubleConsonants(string) {
 
   return string
     .split('')
-    .map(char => char.match(CONSONANT_REGEX) ? char.repeat(2) : char)
+    .map(char => (char.match(CONSONANT_REGEX) ? char.repeat(2) : char))
     .join('');
 }
 

@@ -5,8 +5,8 @@
 function sequence(number) {
   const result = [];
 
-  for (let i = 1; i <= number; i += 1) {
-    result.push(i);
+  for (let counter = 1; counter <= number; counter += 1) {
+    result.push(counter);
   }
 
   return result;
